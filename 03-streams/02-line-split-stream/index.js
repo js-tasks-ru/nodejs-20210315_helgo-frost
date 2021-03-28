@@ -11,7 +11,9 @@ function onData(line) {
 
 lines.on("data", onData);
 
-// lines.write(`первая строка${os.EOL}вторая строка${os.EOL}третья строка`);
-lines.write(`первая строка${os.EOL}вторая строка${os.EOL}третья строка`);
+lines.write("a");
+lines.write(`b${os.EOL}c`);
+lines.write(`d${os.EOL}e`);
+lines.write(`f${os.EOL}g`);
 
 lines.end();
