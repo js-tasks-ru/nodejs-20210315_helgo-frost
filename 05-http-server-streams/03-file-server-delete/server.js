@@ -20,12 +20,16 @@ server.on('request', async (req, res) => {
       }
       try {
         await stat(filepath)
-      } catch (err) {
-
         await unlink(filepath)
-        res.statusCode = 201
+        res.statusCode = 200
         res.end('OK')
         return
+
+      } catch (err) {
+        res.statusCode = 404
+        res.end('File not exists!')
+        return
+
       }
 
       break;
