@@ -26,7 +26,7 @@ server.on("request", async (req, res) => {
         res.end("File already exists!");
         return;
       } catch (err) {
-        console.log(err);
+        
       }
 
       const fileStream = fs.createWriteStream(filepath);
